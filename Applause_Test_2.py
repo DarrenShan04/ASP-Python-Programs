@@ -1,2 +1,2 @@
 
-play Applause.wav
+play (Applause.wav)
