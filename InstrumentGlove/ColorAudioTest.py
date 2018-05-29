@@ -44,7 +44,7 @@ lux = Adafruit_TCS34725.calculate_lux(r, g, b)
 print('Color: red={0} green={1} blue={2} clear={3}'.format(r, g, b, c))
 print('Luminosity: {0} lux'.format(lux))
 
-if r in range(50, 70) and g in range(20, 35) and b in range(20, 30):
+if r in range(50, 70) and g in range(20, 35) and b in range(20, 40):
     if lux in range(0, 10):
         if c in range(95, 125):
             os.system('aplay B.wav')
