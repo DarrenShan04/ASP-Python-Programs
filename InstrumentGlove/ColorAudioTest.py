@@ -47,7 +47,7 @@ print('Luminosity: {0} lux'.format(lux))
 if r in range(50, 65) and g in range(20, 35) and b in range(20, 30):
     if lux in range(0, 10):
         if c in range(95, 120):
-            os.sytem('aplay B.wav')
+            os.system('aplay B.wav')
 
 # Enable interrupts and put the chip back to low power sleep/disabled.
 tcs.set_interrupt(True)
