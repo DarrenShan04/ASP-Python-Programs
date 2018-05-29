@@ -46,7 +46,7 @@ print('Luminosity: {0} lux'.format(lux))
 
 if r in range(50, 70) and g in range(20, 35) and b in range(20, 40):
     if lux in range(0, 10):
-        if c in range(95, 125):
+        if c in range(95, 150):
             os.system('aplay GuitarB.wav')
 
 # Enable interrupts and put the chip back to low power sleep/disabled.
