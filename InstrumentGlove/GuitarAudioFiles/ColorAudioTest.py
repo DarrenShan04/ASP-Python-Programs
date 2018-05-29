@@ -44,10 +44,8 @@ lux = Adafruit_TCS34725.calculate_lux(r, g, b)
 print('Color: red={0} green={1} blue={2} clear={3}'.format(r, g, b, c))
 print('Luminosity: {0} lux'.format(lux))
 
-if r in range(50, 70) and g in range(20, 35) and b in range(20, 40):
-    if lux in range(0, 10):
-        if c in range(95, 150):
-            os.system('aplay GuitarB.wav')
+if r in range(50, 70) and g in range(20, 35) and b in range(20, 40) and lux in range(0, 10) and c in range(95, 150):
+    os.system('aplay GuitarB.wav')
 
 # Enable interrupts and put the chip back to low power sleep/disabled.
 tcs.set_interrupt(True)
