@@ -32,6 +32,7 @@ tcs.set_interrupt(False)
 
 # Read the R, G, B, C color data.
 r, g, b, c = tcs.get_raw_data()
+print(tcs.get_raw_data())
 
 # Calculate color temperature using utility functions.  You might also want to
 # check out the colormath library for much more complete/accurate color functions.
