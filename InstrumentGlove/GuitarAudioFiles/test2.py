@@ -23,7 +23,7 @@ colorValues = {'green' : [[r for r in range(20, 46)], [g for g in range(45, 81)]
                 'darkblue' : [[r for r in range(10, 36)], [g for g in range(15, 36)], [b for b in range(18, 41)], [c for c in range(60, 86)], [l for l in range(0, 26)]],
                 'red' : [[r for r in range(50, 71)], [g for g in range(20, 41)], [b for b in range(17, 36)], [c for c in range(95, 121)], [l for l in range(0, 16)]],
                 'grey' : [[r for r in range(65, 91)], [g for g in range(85, 111)], [b for b in range(75, 101)], [c for c in range(247, 274)], [l for l in range(50, 76)]]}
-colorsValues = OrderedDict()
+colorValues = OrderedDict()
 
 pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'aplay PianoD#.wav', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav', 'grey' : 'PianoC.wav' }
 pianoTunes = OrderedDict()
