@@ -23,9 +23,9 @@ colorValues = {'green' : [[r for r in range(20, 46)], [g for g in range(45, 81)]
                 'darkblue' : [[r for r in range(10, 36)], [g for g in range(15, 36)], [b for b in range(18, 41)], [c for c in range(60, 86)], [l for l in range(0, 26)]],
                 'red' : [[r for r in range(50, 71)], [g for g in range(20, 41)], [b for b in range(17, 36)], [c for c in range(95, 121)], [l for l in range(0, 16)]],
                 'grey' : [[r for r in range(65, 91)], [g for g in range(85, 111)], [b for b in range(75, 101)], [c for c in range(247, 274)], [l for l in range(50, 76)]]}
-colorValues = OrderedDict()
+colorsValues = OrderedDict()
 
-pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'PianoD#', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav', 'grey' : 'PianoC.wav' }
+pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'aplay PianoD#.wav', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav', 'grey' : 'PianoC.wav' }
 pianoTunes = OrderedDict()
 
 guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : 'aplay GuiarC#.wav', 'blue' : 'aplay GuitarD.wav', 'black' : 'aplay GuitarD#.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'darkgreen' : 'aplay GuitarF#.wav', 'magenta':'aplay GuitarG.wav', 'darkpurple' : 'aplay GuitarG#.wav', 'pink':'aplay GuitarA.wav', 'darkblue': 'aplay GuitarA#.wav', 'red' : 'GuitarB.wav'}
@@ -34,11 +34,7 @@ guitarTunes = OrderedDict()
 drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
 drumTunes = OrderedDict()
 
-print('a')
 for key in colorValues:
-        print('b')
-        if sensedcolor[0] in colorValues[key][0] and sensedcolor[1] in colorValues[key][1] and sensedcolor[2] in colorValues[key][2] and sensedcolor[3] in colorValues[key][3] and lux in colorValues[key][4]:
-                print('c')
-                print(key)
-                #print(pianoTunes[key])
-            #os.system(guitarTunes[key])
+  if sensedcolor[0] in colorValues[key][0] and sensedcolor[1] in colorValues[key][1] and sensedcolor[2] in colorValues[key][2] and sensedcolor[3] in colorValues[key][3] and lux in colorValues[key][4]:
+    print(pianoTunes[key])    
+    #os.system(pianoTunes[key])
