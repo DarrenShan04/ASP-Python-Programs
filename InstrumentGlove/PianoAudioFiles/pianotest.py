@@ -39,7 +39,7 @@ for key in colorValues:
                 print('\nc')
                 #print(sensedcolor)
                 #print(lux)
-                print(key, ':', )
+                print('\n', key, '\n')
                 
                 #print(pianoTunes[key])
             #os.system(guitarTunes[key])
