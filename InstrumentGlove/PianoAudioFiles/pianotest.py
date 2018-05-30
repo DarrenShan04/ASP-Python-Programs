@@ -32,6 +32,8 @@ guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : 'aplay GuiarC#.wav', 'bl
 drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
 
 print('a')
+print(sensedcolor)
+print(lux)
 for key in colorValues:
         print('b')
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
