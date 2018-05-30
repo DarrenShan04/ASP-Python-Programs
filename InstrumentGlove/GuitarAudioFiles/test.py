@@ -7,7 +7,7 @@ import Adafruit_TCS34725
 tcs = Adafruit_TCS34725.TCS34725()
 tcs.set_interrupt(False)
 
-colorsValues = {'green' : [[r for r in range(20, 46)], [g for g in range(45, 81)], [b for b in range(25, 51)], [c for c in range(115, 141)], [l for l in range(50, 76)]],
+colorValues = {'green' : [[r for r in range(20, 46)], [g for g in range(45, 81)], [b for b in range(25, 51)], [c for c in range(115, 141)], [l for l in range(50, 76)]],
                 'brown' : [[r for r in range(5, 31)], [g for g in range(5, 31)], [b for b in range(5, 31)], [c for c in range(38, 64)], [l for l in range(0, 26)]],
                 'black' : [[r for r in range(5, 26)], [g for g in range(10, 31)], [b for b in range(10, 31)], [c for c in range(35, 61)], [l for l in range(5, 26)]],
                 'blue' : [[r for r in range(15, 41)], [g for g in range(45, 71)], [b for b in range(65, 81)], [c for c in range(155, 181)], [l for l in range(15, 41)]],
@@ -31,6 +31,6 @@ guitarTunes = OrderedDict()
 drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
 drumTunes = OrderedDict()
 
-for key in dictionary:
-        if inssensedcolor[0] in dictionary[key][0] and inssensedcolor[1] in dictionary[key][1] and inssensedcolor[2] in dictionary[key][2] and inssensedcolor[3] in dictionary[key][3] and lux in dictionary[key][4]:
+for key in colorValues:
+        if sensedcolor[0] in colorValues[key][0] and sensedcolor[1] in colorValues[key][1] and sensedcolor[2] in colorValues[key][2] and inssensedcolor[3] in colorValues[key][3] and lux in colorValues[key][4]:
             os.system(guitarTunes[key])
