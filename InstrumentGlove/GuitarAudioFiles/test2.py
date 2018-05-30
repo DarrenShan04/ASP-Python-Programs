@@ -36,5 +36,6 @@ drumTunes = OrderedDict()
 
 for key in colorValues:
         if sensedcolor[0] in colorValues[key][0] and sensedcolor[1] in colorValues[key][1] and sensedcolor[2] in colorValues[key][2] and sensedcolor[3] in colorValues[key][3] and lux in colorValues[key][4]:
+                print(key)
                 print(pianoTunes[key])
             #os.system(guitarTunes[key])
