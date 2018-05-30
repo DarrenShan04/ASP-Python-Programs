@@ -35,12 +35,11 @@ print('a')
 print(colorValues)
 for key in colorValues:
         print(key)
-        if sensedcolor[0] in colorValues[key][0] and sensedcolor[1] in colorValues[key][1] and sensedcolor[2] in colorValues[key][2] and sensedcolor[3] in colorValues[key][3] and lux in colorValues[key][4]:
+        if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
                 print('\nc')
-                print(colorValues[key][0])
-                print(sensedcolor)
-                print(lux)
-                print(key)
+                #print(sensedcolor)
+                #print(lux)
+                print(key, ':', )
                 
                 #print(pianoTunes[key])
             #os.system(guitarTunes[key])
