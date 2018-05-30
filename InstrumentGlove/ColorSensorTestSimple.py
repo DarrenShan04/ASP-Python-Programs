@@ -41,7 +41,8 @@ color_temp = Adafruit_TCS34725.calculate_color_temperature(r, g, b)
 lux = Adafruit_TCS34725.calculate_lux(r, g, b)
 
 
-print('Color: red={0} green={1} blue={2} clear={3}'.format(r, g, b, c))
+
+
 
 
 if color_temp is None:
