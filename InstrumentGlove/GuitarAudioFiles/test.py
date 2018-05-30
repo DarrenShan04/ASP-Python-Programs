@@ -6,6 +6,8 @@ import Adafruit_TCS34725
 
 tcs = Adafruit_TCS34725.TCS34725()
 tcs.set_interrupt(False)
+sensedcolor = tcs.get_raw_data()
+lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
 colorValues = {'green' : [[r for r in range(20, 46)], [g for g in range(45, 81)], [b for b in range(25, 51)], [c for c in range(115, 141)], [l for l in range(50, 76)]],
                 'brown' : [[r for r in range(5, 31)], [g for g in range(5, 31)], [b for b in range(5, 31)], [c for c in range(38, 64)], [l for l in range(0, 26)]],
