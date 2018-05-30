@@ -25,10 +25,10 @@ colorValues = {'green' : [[r for r in range(20, 46)], [g for g in range(45, 81)]
                 'grey' : [[r for r in range(65, 91)], [g for g in range(85, 111)], [b for b in range(75, 101)], [c for c in range(247, 274)], [l for l in range(50, 76)]]}
 colorsValues = OrderedDict()
 
-cxpianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : ' aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'aplay PianoD#.wav', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'dark green' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav', 'grey' : 'PianoC.wav' }
+cxpianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'aplay PianoD#.wav', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav', 'grey' : 'PianoC.wav' }
 pianoTunes = OrderedDict()
 
-guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : ' aplay GuitarC#.wav', 'blue' : 'aplay GuitarD.wav', 'black' : 'aplay GuitarD#.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'dark green' : 'aplay GuitarF#.wav', 'magenta':'aplay GuitarG.wav', 'dark purple' : 'aplay GuitarG#.wav', 'pink':'aplay GuitarA.wav', 'darkblue': 'aplay GuitarA#.wav', 'red' : 'GuitarB.wav', 'grey' : 'GuitarC.wav' }
+guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : 'aplay GuitarC#.wav', 'blue' : 'aplay GuitarD.wav', 'black' : 'aplay GuitarD#.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'darkgreen' : 'aplay GuitarF#.wav', 'magenta':'aplay GuitarG.wav', 'darkpurple' : 'aplay GuitarG#.wav', 'pink':'aplay GuitarA.wav', 'darkblue': 'aplay GuitarA#.wav', 'red' : 'GuitarB.wav'}
 guitarTunes = OrderedDict()
 
 drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
