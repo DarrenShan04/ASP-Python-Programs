@@ -48,7 +48,12 @@ lux = Adafruit_TCS34725.calculate_lux(r, g, b)
 if color_temp is None:
     print('Too dark to determine color temperature!')
 else:
-    print('Color Temperature: {0} K'.format(color_temp))
+    print(r)
+    print(g)
+    print(b)
+    print(c)
+
+    print('\nColor Temperature: {0} K'.format(color_temp))
 
 
 print('Luminosity: {0} lux'.format(lux))
