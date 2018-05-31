@@ -8,8 +8,8 @@ tcs = Adafruit_TCS34725.TCS34725()
 
 colorValues = {'green' : [[r for r in range(22, 42)], [g for g in range(54, 74)], [b for b in range(24, 44)], [c for c in range(121, 141)], [l for l in range(54, 74)]],
                 'brown' : [[r for r in range(7, 27)], [g for g in range(7, 27)], [b for b in range(6, 26)], [c for c in range(42, 72)], [l for l in range(-1, 19)]],
-                'black' : [[r for r in range(17, 37)], [g for g in range(54, 74)], [b for b in range(70, 90)], [c for c in range(162, 182)], [l for l in range(22, 42)]],
-                'blue' : [[r for r in range(2, 22)], [g for g in range(7, 27)], [b for b in range(4, 24)], [c for c in range(35, 55)], [l for l in range(2, 22)]],
+                'blue' : [[r for r in range(17, 37)], [g for g in range(54, 74)], [b for b in range(70, 90)], [c for c in range(162, 182)], [l for l in range(22, 42)]],
+                'black' : [[r for r in range(2, 22)], [g for g in range(7, 27)], [b for b in range(4, 24)], [c for c in range(35, 55)], [l for l in range(2, 22)]],
                 'orange' : [[r for r in range(66, 86)], [g for g in range(41, 65)], [b for b in range(23, 43)], [c for c in range(148, 168)], [l for l in range(21, 41)]],
                 'yellow' : [[r for r in range(98, 126)], [g for g in range(106, 131)], [b for b in range(41, 61)], [c for c in range(261, 301)], [l for l in range(98, 118)]],
                 'darkgreen' : [[r for r in range(12, 33)], [g for g in range(30, 50)], [b for b in range(15, 35)], [c for c in range(78, 98)], [l for l in range(28, 48)]],
