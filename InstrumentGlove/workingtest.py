@@ -1,4 +1,4 @@
-from collections import OrderedDict
+
 import time
 import os
 import smbus
@@ -32,25 +32,25 @@ sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
 lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
-if BGcolor = 'Piano':
+if BGcolor == 'Piano':
     instrument = 'Piano'
 
-elif BGcolor = 'Guitar':
+elif BGcolor == 'Guitar':
     instrument = 'Guitar'
 
-elif BGColor = 'Drums':
+elif BGColor == 'Drums':
     instrument = 'Drums'
 
-if instrument='Piano':
+if instrument=='Piano':
     for key in colorValues:
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
             os.system(pianotunes[key])
 
-elif instruments='Guitar':
+elif instruments=='Guitar':
     for key in colorValues:
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
             os.system(guitarTunes[key])    
-elif instruments='Drums':
+elif instruments=='Drums':
     for key in colorValues:
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
             os.system(drumTunes[key])
