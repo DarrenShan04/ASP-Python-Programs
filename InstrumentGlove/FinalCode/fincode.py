@@ -6,21 +6,21 @@ import math
 
 tcs = Adafruit_TCS34725.TCS34725()
 
-colorValues = {'green' : [[r for r in range(12, 52)], [g for g in range(44, 84)], [b for b in range(14, 54)], [c for c in range(111, 151)], [l for l in range(44, 84)]],
-                'brown' : [[r for r in range(-3, 37)], [g for g in range(-3, 37)], [b for b in range(-4, 36)], [c for c in range(32, 82)], [l for l in range(-11, 29)]],
-                'black' : [[r for r in range(7, 47)], [g for g in range(44, 84)], [b for b in range(60, 100)], [c for c in range(152, 192)], [l for l in range(12, 52)]],
-                'blue' : [[r for r in range(-8, 32)], [g for g in range(-3, 37)], [b for b in range(-6, 34)], [c for c in range(25, 65)], [l for l in range(-8, 32)]],
-                'orange' : [[r for r in range(56, 96)], [g for g in range(31, 75)], [b for b in range(13, 53)], [c for c in range(138, 178)], [l for l in range(11, 51)]],
-                'yellow' : [[r for r in range(88, 136)], [g for g in range(96, 141)], [b for b in range(31, 71)], [c for c in range(261, 331)], [l for l in range(88, 128)]],
-                'darkgreen' : [[r for r in range(2, 43)], [g for g in range(20, 60)], [b for b in range(5, 45)], [c for c in range(68, 108)], [l for l in range(18, 58)]],
-                'magenta' : [[r for r in range(25, 66)], [g for g in range(12, 52)], [b for b in range(28, 68)], [c for c in range(103, 143)], [l for l in range(-20, 20)]],
-                'darkpurple' : [[r for r in range(-4, 36)], [g for g in range(-2,38)], [b for b in range(-1, 39)], [c for c in range(35, 75)], [l for l in range(-12, 28)]],
-                'pink' : [[r for r in range(60, 100)], [g for g in range(53, 93)], [b for b in range(49, 89)], [c for c in range(202, 242)], [l for l in range(19, 59)]],
-                'darkblue' : [[r for r in range(-3, 37)], [g for g in range(10, 50)], [b for b in range(16, 56)], [c for c in range(64, 104)], [l for l in range(-6, 34)]],
-                'red' : [[r for r in range(38, 78)], [g for g in range(10, 51)], [b for b in range(8, 48)], [c for c in range(93, 133)], [l for l in range(1, 41)]],
-                'BGcolorpiano' : [[r for r in range(11, 51)], [g for g in range(67, 107)], [b for b in range(83, 123)], [c for c in range(202, 242)], [l for l in range(32, 72)], ['piano']],
-                'BGcolorguitar' : [[r for r in range(29, 70)], [g for g in range(72, 112)], [b for b in range(45, 86)], [c for c in range(149, 189)], [l for l in range(71, 111)], ['guitar']],
-                'BGcolordrum' : [[r for r in range(78, 118)], [g for g in range(117, 157)], [b for b in range(113, 153)], [c for c in range(313, 353)], [l for l in range(76, 116)], ['drum']]}
+colorValues = {'green' : [[r for r in range(22, 42)], [g for g in range(54, 74)], [b for b in range(24, 44)], [c for c in range(121, 141)], [l for l in range(54, 74)]],
+                'brown' : [[r for r in range(7, 27)], [g for g in range(7, 27)], [b for b in range(6, 26)], [c for c in range(42, 72)], [l for l in range(-1, 19)]],
+                'black' : [[r for r in range(17, 37)], [g for g in range(54, 74)], [b for b in range(70, 90)], [c for c in range(162, 182)], [l for l in range(22, 42)]],
+                'blue' : [[r for r in range(2, 22)], [g for g in range(7, 27)], [b for b in range(4, 24)], [c for c in range(35, 55)], [l for l in range(2, 22)]],
+                'orange' : [[r for r in range(66, 86)], [g for g in range(41, 65)], [b for b in range(23, 43)], [c for c in range(148, 168)], [l for l in range(21, 41)]],
+                'yellow' : [[r for r in range(98, 126)], [g for g in range(106, 131)], [b for b in range(41, 61)], [c for c in range(261, 301)], [l for l in range(98, 118)]],
+                'darkgreen' : [[r for r in range(12, 33)], [g for g in range(30, 50)], [b for b in range(15, 35)], [c for c in range(78, 98)], [l for l in range(28, 48)]],
+                'magenta' : [[r for r in range(35, 56)], [g for g in range(22, 42)], [b for b in range(38, 58)], [c for c in range(113, 133)], [l for l in range(-10, 10)]],
+                'darkpurple' : [[r for r in range(6, 26)], [g for g in range(8,28)], [b for b in range(9, 29)], [c for c in range(45, 65)], [l for l in range(-2, 18)]],
+                'pink' : [[r for r in range(70, 90)], [g for g in range(63, 83)], [b for b in range(59, 79)], [c for c in range(212, 232)], [l for l in range(9, 29)]],
+                'darkblue' : [[r for r in range(7, 27)], [g for g in range(20, 40)], [b for b in range(26, 46)], [c for c in range(74, 94)], [l for l in range(4, 24)]],
+                'red' : [[r for r in range(48, 68], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(103, 123)], [l for l in range(11, 31)]],
+                'BGcolorpiano' : [[r for r in range(21, 41)], [g for g in range(77, 97)], [b for b in range(93, 113)], [c for c in range(212, 232)], [l for l in range(22, 62)], ['piano']],
+                'BGcolorguitar' : [[r for r in range(39, 60)], [g for g in range(82, 102)], [b for b in range(55, 76)], [c for c in range(159, 179)], [l for l in range(81, 101)], ['guitar']],
+                'BGcolordrum' : [[r for r in range(88, 108)], [g for g in range(127, 147)], [b for b in range(123, 143)], [c for c in range(323, 343)], [l for l in range(86, 106)], ['drum']]}
                
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
