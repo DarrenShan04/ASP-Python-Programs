@@ -20,7 +20,7 @@ colorValues = {'green' : [[r for r in range(12, 52)], [g for g in range(44, 84)]
                 'red' : [[r for r in range(38, 48)], [g for g in range(10, 51)], [b for b in range(8, 48)], [c for c in range(93, 133)], [l for l in range(1, 41)]],
                 'BGcolorpiano' : [[r for r in range(11, 51)], [g for g in range(67, 107)], [b for b in range(83, 123)], [c for c in range(202, 242)], [l for l in range(32, 72)], ['piano']],
                 'BGcolorguitar' : [[r for r in range(29, 70)], [g for g in range(72, 112)], [b for b in range(45, 86)], [c for c in range(149, 189)], [l for l in range(71, 111)], ['guitar']],
-                'BGcolorguitar' : [[r for r in range(78, 118)], [g for g in range(117, 157)], [b for b in range(113, 153)], [c for c in range(313, 353)], [l for l in range(76, 116)], ['drum']]}
+                'BGcolordrum' : [[r for r in range(78, 118)], [g for g in range(117, 157)], [b for b in range(113, 153)], [c for c in range(313, 353)], [l for l in range(76, 116)], ['drum']]}
                
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
@@ -80,6 +80,7 @@ while True:
             if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                     os.system(pianoTunes[key])
                     time.sleep(0.5)
+                    continue
     
     if instrument == 'guitar':
         ravg, gavg, bavg, cavg, lavg = run5times()
@@ -87,10 +88,12 @@ while True:
             if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                     os.system(guitarTunes[key])
                     time.sleep(0.5)
+                    continue
     if instrument == 'drum':
         ravg, gavg, bavg, cavg, lavg = run5times()
         for key in colorValues:
             if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                     os.system(drumTunes[key])
                     time.sleep(0.5)
+                    continue
         
