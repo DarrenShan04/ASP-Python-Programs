@@ -27,6 +27,7 @@ def run5times():
     lislux = []
     x = 0
     while x < 5:
+        sensedcolor = tcs.get_raw_data()
         lis.append(sensedcolor)
         lislux.append(lux)
         x += 1
@@ -58,7 +59,7 @@ pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue
 
 while True:
     print('a')
-    tcs.get_raw_data()
+    #tcs.get_raw_data()
     ravg, gavg, bavg, cavg, lavg = run5times()
     print(ravg)
     print(gavg)
