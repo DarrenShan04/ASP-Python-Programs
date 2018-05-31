@@ -15,7 +15,7 @@ colorValues = {'green' : [[r for r in range(22, 42)], [g for g in range(54, 74)]
                 'darkgreen' : [[r for r in range(12, 33)], [g for g in range(30, 50)], [b for b in range(15, 35)], [c for c in range(78, 98)], [l for l in range(28, 48)]],
                 'magenta' : [[r for r in range(35, 56)], [g for g in range(22, 42)], [b for b in range(38, 58)], [c for c in range(113, 133)], [l for l in range(-10, 10)]],
                 'darkpurple' : [[r for r in range(6, 26)], [g for g in range(8,28)], [b for b in range(9, 29)], [c for c in range(45, 65)], [l for l in range(-2, 18)]],
-                'pink' : [[r for r in range(70, 90)], [g for g in range(63, 83)], [b for b in range(59, 79)], [c for c in range(212, 232)], [l for l in range(9, 29)]],
+                'pink' : [[r for r in range(70, 90)], [g for g in range(63, 83)], [b for b in range(59, 79)], [c for c in range(212, 250)], [l for l in range(9, 29)]],
                 'darkblue' : [[r for r in range(7, 27)], [g for g in range(20, 40)], [b for b in range(26, 46)], [c for c in range(74, 94)], [l for l in range(4, 24)]],
                 'red' : [[r for r in range(48, 68)], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(103, 123)], [l for l in range(11, 31)]],
                 'BGcolorpiano' : [[r for r in range(21, 41)], [g for g in range(77, 97)], [b for b in range(93, 113)], [c for c in range(212, 232)], [l for l in range(22, 62)], ['piano']],
