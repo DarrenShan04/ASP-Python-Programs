@@ -32,4 +32,15 @@ sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
 lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
+if re in range (25, 51) and gr in range(85 ,110) and bl in range(95, 120) and cl in range(240, 265) and lux in range(45, 70):
+    instrument = 'Piano'
+    print('a')
+
+if re in range(75, 100) and gr in range(105,130) and bl in range(105,130) and cl in range(318, 343) and lux in range(58, 84):
+    instrument='Drum'
+    print('b')
+
+if re in range(20,45) and gr in range(60, 85) and bl in range(35, 60) and cl in range(138, 163) and lux in range(58, 84):
+    instrument='Guitar'
+    print('c')
 
