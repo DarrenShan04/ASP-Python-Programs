@@ -25,35 +25,11 @@ pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : ' aplay PianoC#.wav', 'blu
 guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : ' aplay GuitarC#.wav', 'blue' : 'aplay GuitarD.wav', 'black' : 'aplay GuitarD#.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'dark green' : 'aplay GuitarF#.wav', 'magenta':'aplay GuitarG.wav', 'dark purple' : 'aplay GuitarG#.wav', 'pink':'aplay GuitarA.wav', 'dark blue': 'aplay GuitarA#.wav', 'red' : 'GuitarB.wav', 'grey' : 'GuitarC.wav' }
 
 drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
-instrument=()
+instrument=''
 namesForInstrument={'BGgreen' :'aplay Guitar.wav', 'BGblue' : 'aplay Piano.wav', 'BGLavender':'aplay Drum.wav'} 
 
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
 lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
-if BGcolor == 'Piano':
-    instrument = 'Piano'
-    print ('a')
-elif BGcolor == 'Guitar':
-    instrument = 'Guitar'
-    print ('b')
-elif BGcolor == 'Drums':
-    instrument = 'Drums'
-    print ('c')
-if instrument=='Piano':
-    for key in colorValues:
-        if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
-            os.system(pianotunes[key])
-            print ('d')
 
-elif instrument=='Guitar':
-    for key in colorValues:
-        if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
-            os.system(guitarTunes[key])  
-            print ('e')
-elif instrument=='Drums':
-    for key in colorValues:
-        if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
-            os.system(drumTunes[key])
-            print('f')
