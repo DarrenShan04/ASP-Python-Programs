@@ -4,9 +4,9 @@ import smbus
 import Adafruit_TCS34725
 
 tcs = Adafruit_TCS34725.TCS34725()
-a = tcs.get_raw_data()
+sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
-l = Adafruit_TCS34725.calculate_lux(re, gr, bl)
+lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
 def run5times():
     lis = []
@@ -15,8 +15,8 @@ def run5times():
    
 
     while x < 5:
-        lis.append(a)
-        lislux.append(l)
+        lis.append(sensedcolor)
+        lislux.append(lux)
         x += 1
     print(lis)
     b = 0
@@ -38,11 +38,11 @@ def run5times():
     cavg = sum(clear) / 5
     lavg = sum(luxvalues) / 5
 
-    print(ravg)
-    print(gavg)
-    print(bavg)
-    print(cavg)
-    print(lavg)
+    return ravg
+    return gavg
+    return bavg
+    return cavg
+    return lavg
     
     #for x in lis:
         #print(x)

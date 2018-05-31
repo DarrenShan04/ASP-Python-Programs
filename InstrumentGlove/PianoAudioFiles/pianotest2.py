@@ -57,36 +57,13 @@ def run5times():
 
 pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'PianoD#', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav'}
 
-guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : 'aplay GuiarC#.wav', 'blue' : 'aplay GuitarD.wav', 'black' : 'aplay GuitarD#.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'darkgreen' : 'aplay GuitarF#.wav', 'magenta':'aplay GuitarG.wav', 'darkpurple' : 'aplay GuitarG#.wav', 'pink':'aplay GuitarA.wav', 'darkblue': 'aplay GuitarA#.wav', 'red' : 'GuitarB.wav'}
-
-drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
-
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
 lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 run5times()
-
-if ravg in range (25, 51) and gavg in range(85 ,110) and bavg in range(95, 120) and cavg in range(240, 265) and lavg in range(45, 70):
-    instrument = 'Piano'
-    sensedcolor = tcs.get_raw_data
+while True:
+    tcs.get_raw_data()
     for key in colorValues:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                 os.system(pianoTunes[key])
-
-if ravg in range (75, 100) and gavg in range(105, 130) and bavg in range(105, 130) and cavg in range(318, 343) and lavg in range(58, 84):
-    instrument = 'Drum'
-    sensedcolor = tcs.get_raw_data
-    for key in colorValues:
-        if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
-                os.system(drumTunes[key])
-
-if ravg in range (20, 45) and gavg in range(60, 108) and bavg in range(35, 60) and cavg in range(138, 163) and lavg in range(58, 84):
-    instrument = 'Guitar'
-    sensedcolor = tcs.get_raw_data
-    for key in colorValues:
-        if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
-                os.system(drumTunes[key])
-
-
-
-
+                
