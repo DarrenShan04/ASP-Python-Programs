@@ -42,18 +42,15 @@ def run5times():
         clear.append(lis[b][3])
         luxvalues.append(lislux[b])
         b += 1
-    ravg = sum(red) / 5
-    gavg = sum(green) / 5
-    bavg = sum(blue) / 5
-    cavg = sum(clear) / 5
-    lavg = sum(luxvalues) / 5
+    avgr = sum(red) / 5
+    avgg = sum(green) / 5
+    avgb = sum(blue) / 5
+    avgc = sum(clear) / 5
+    avgl = sum(luxvalues) / 5
 
-    return ravg
-    return gavg
-    return bavg
-    return cavg
-    return lavg
-    
+    return avgr, avgg, avgb, avgc, avgl
+
+ravg, gavg, bavg, cavg, lavg = run5times()    
 
 pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'PianoD#', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav'}
 
