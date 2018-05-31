@@ -9,11 +9,12 @@ a = tcs.get_raw_data()
 def run5times():
     lis = []
     x = 0
-    print(lis)
+   
 
     while x < 5:
         lis.append(a)
         x += 1
+    print(lis)
     b = 0
     red = []
     green = []
