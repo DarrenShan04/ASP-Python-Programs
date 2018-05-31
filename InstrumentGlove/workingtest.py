@@ -25,7 +25,7 @@ pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : ' aplay PianoC#.wav', 'blu
 guitarTunes = {'green' : 'aplay GuitarC.wav', 'brown' : ' aplay GuitarC#.wav', 'blue' : 'aplay GuitarD.wav', 'black' : 'aplay GuitarD#.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'dark green' : 'aplay GuitarF#.wav', 'magenta':'aplay GuitarG.wav', 'dark purple' : 'aplay GuitarG#.wav', 'pink':'aplay GuitarA.wav', 'dark blue': 'aplay GuitarA#.wav', 'red' : 'GuitarB.wav', 'grey' : 'GuitarC.wav' }
 
 drumTunes = {'black':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'brown':'DrumStick.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
-
+instrument=()
 namesForInstrument={'BGgreen' :'aplay Guitar.wav', 'BGblue' : 'aplay Piano.wav', 'BGLavender':'aplay Drum.wav'} 
 
 sensedcolor = tcs.get_raw_data()
