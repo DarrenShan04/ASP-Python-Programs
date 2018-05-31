@@ -5,14 +5,18 @@ import Adafruit_TCS34725
 
 tcs = Adafruit_TCS34725.TCS34725()
 a = tcs.get_raw_data()
+re, gr, bl, cl = tcs.get_raw_data()
+l = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
 def run5times():
     lis = []
+    lislux = []
     x = 0
    
 
     while x < 5:
         lis.append(a)
+        lislux.append(l)
         x += 1
     print(lis)
     b = 0
@@ -26,7 +30,7 @@ def run5times():
         green.append(lis[b][1])
         blue.append(lis[b][2])
         clear.append(lis[b][3])
-        luxvalues.append(lis[b][4])
+        luxvalues.append(lislux[b])
         b += 1
     ravg = sum(red) / 5
     gavg = sum(green) / 5
