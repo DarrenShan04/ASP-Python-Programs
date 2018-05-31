@@ -73,6 +73,7 @@ while True:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
             if key.startswith('B'):
                 instrument = colorValues[key][5]
+                print('a')
             else:
                 pass
     if instrument == 'piano':
@@ -84,6 +85,7 @@ while True:
                     continue
     
     if instrument == 'guitar':
+        print('b')
         ravg, gavg, bavg, cavg, lavg = run5times()
         for key in colorValues:
             if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
@@ -91,6 +93,7 @@ while True:
                     time.sleep(0.5)
                     continue
     if instrument == 'drum':
+        print('c')
         ravg, gavg, bavg, cavg, lavg = run5times()
         for key in colorValues:
             if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
