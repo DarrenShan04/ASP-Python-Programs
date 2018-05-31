@@ -38,7 +38,7 @@ if BGcolor == 'Piano':
 elif BGcolor == 'Guitar':
     instrument = 'Guitar'
     print ('b')
-elif BColor == 'Drums':
+elif BGcolor == 'Drums':
     instrument = 'Drums'
     print ('c')
 if instrument=='Piano':
