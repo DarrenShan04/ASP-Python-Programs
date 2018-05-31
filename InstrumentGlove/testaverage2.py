@@ -24,7 +24,7 @@ def run5times():
         green.append(lis[b][1])
         blue.append(lis[b][2])
         clear.append(lis[b][3])
-        luxvalue.append(lis[b][4])
+        luxvalues.append(lis[b][4])
         b += 1
     ravg = sum(red) / 5
     gavg = sum(green) / 5
