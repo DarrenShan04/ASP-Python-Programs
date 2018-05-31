@@ -6,7 +6,7 @@ import Adafruit_TCS34725
 
 tcs = Adafruit_TCS34725.TCS34725()
 tcs.set_interrupt(False)
-
+BGcolor =()
 colorValues = {'green' : [[r for r in range(25, 51)], [g for g in range(70, 96)], [b for b in range(55, 81)], [c for c in range(175, 201)], [l for l in range(58, 84)]],
                 'brown' : [[r for r in range(10, 36)], [g for g in range(10, 36)], [b for b in range(10, 36)], [c for c in range(55, 81)], [l for l in range(0, 26)]],
                 'black' : [[r for r in range(20, 46)], [g for g in range(64, 90)], [b for b in range(85, 111)], [c for c in range(190, 216)], [l for l in range(25, 51)]],
