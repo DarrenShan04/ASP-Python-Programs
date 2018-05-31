@@ -34,23 +34,26 @@ lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
 if BGcolor == 'Piano':
     instrument = 'Piano'
-
+print ('a')
 elif BGcolor == 'Guitar':
     instrument = 'Guitar'
-
-elif BGColor == 'Drums':
+print ('b')
+elif BColor == 'Drums':
     instrument = 'Drums'
-
+print ('c')
 if instrument=='Piano':
     for key in colorValues:
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
             os.system(pianotunes[key])
+            print ('d')
 
 elif instruments=='Guitar':
     for key in colorValues:
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
-            os.system(guitarTunes[key])    
+            os.system(guitarTunes[key])  
+            print ('e')
 elif instruments=='Drums':
     for key in colorValues:
         if (sensedcolor[0] in colorValues[key][0]) and (sensedcolor[1] in colorValues[key][1]) and (sensedcolor[2] in colorValues[key][2]) and (sensedcolor[3] in colorValues[key][3]) and (lux in colorValues[key][4]):
             os.system(drumTunes[key])
+            print('f')
