@@ -17,7 +17,7 @@ colorValues = {'green' : [[r for r in range(22, 42)], [g for g in range(54, 74)]
                 'darkpurple' : [[r for r in range(6, 26)], [g for g in range(8,28)], [b for b in range(9, 29)], [c for c in range(45, 65)], [l for l in range(-2, 18)]],
                 'pink' : [[r for r in range(70, 90)], [g for g in range(63, 83)], [b for b in range(59, 79)], [c for c in range(212, 250)], [l for l in range(9, 29)]],
                 'darkblue' : [[r for r in range(7, 27)], [g for g in range(20, 40)], [b for b in range(26, 46)], [c for c in range(74, 94)], [l for l in range(4, 24)]],
-                'red' : [[r for r in range(48, 68)], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(103, 123)], [l for l in range(11, 31)]],
+                'red' : [[r for r in range(48, 68)], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(103, 130)], [l for l in range(11, 31)]],
                 'BGcolorpiano' : [[r for r in range(21, 41)], [g for g in range(77, 97)], [b for b in range(93, 113)], [c for c in range(212, 232)], [l for l in range(22, 62)], ['piano']],
                 'BGcolorguitar' : [[r for r in range(39, 60)], [g for g in range(82, 102)], [b for b in range(55, 76)], [c for c in range(159, 179)], [l for l in range(81, 101)], ['guitar']],
                 'BGcolordrum' : [[r for r in range(88, 108)], [g for g in range(127, 147)], [b for b in range(123, 143)], [c for c in range(323, 343)], [l for l in range(86, 106)], ['drum']]}
