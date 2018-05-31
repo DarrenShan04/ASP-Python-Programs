@@ -19,7 +19,9 @@ colorValues = {'green' : [[r for r in range(25, 51)], [g for g in range(70, 96)]
                 'darkblue' : [[r for r in range(10, 36)], [g for g in range(30, 56)], [b for b in range(35, 61)], [c for c in range(100, 126)], [l for l in range(10, 36)]],
                 'red' : [[r for r in range(65, 91)], [g for g in range(45, 71)], [b for b in range(40, 66)], [c for c in range(170, 196)], [l for l in range(15, 41)]]}
                 
-
+sensedcolor = tcs.get_raw_data()
+re, gr, bl, cl = tcs.get_raw_data()
+lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 
 def run5times():
     lis = []
@@ -54,10 +56,8 @@ ravg, gavg, bavg, cavg, lavg = run5times()
 
 pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'PianoD#', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav'}
 
-sensedcolor = tcs.get_raw_data()
-re, gr, bl, cl = tcs.get_raw_data()
-lux = Adafruit_TCS34725.calculate_lux(re, gr, bl)
 run5times()
+
 while True:
     tcs.get_raw_data()
     for key in colorValues:
