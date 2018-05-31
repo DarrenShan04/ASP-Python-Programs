@@ -2,6 +2,7 @@ import time
 import os
 import smbus
 import Adafruit_TCS34725
+import math
 
 tcs = Adafruit_TCS34725.TCS34725()
 
@@ -49,6 +50,11 @@ def run5times():
     avgb = sum(blue) / 5
     avgc = sum(clear) / 5
     avgl = sum(luxvalues) / 5
+    avgr = math.floor(avgr)
+    avgg = math.floor(avgg)
+    avgb = math.floor(avgb)
+    avgc = math.floor(avgc)
+    avgl = math.floor(avgl)
 
     return avgr, avgg, avgb, avgc, avgl
 
