@@ -8,7 +8,7 @@ a = tcs.get_raw_data()
 
 def run5times():
     lis = []
-    x = 1
+    x = 0
 
     while x < 5:
         lis.append(a)
