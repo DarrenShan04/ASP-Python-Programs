@@ -58,9 +58,10 @@ def run5times():
 
     return avgr, avgg, avgb, avgc, avgl
 
-ravg, gavg, bavg, cavg, lavg = run5times()    
+#ravg, gavg, bavg, cavg, lavg = run5times()    
 
 pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue' : 'aplay PianoD.wav', 'black' : 'PianoD#', 'orange' : 'aplay PianoE.wav', 'yellow' : 'aplay PianoF.wav', 'darkgreen' : 'aplay PianoF#.wav', 'magenta':'aplay PianoG.wav', 'dark purple' : 'aplay PianoG#.wav', 'pink':'aplay PianoA.wav', 'darkblue': 'aplay PianoA#.wav', 'red' : 'PianoB.wav'}
+ravg, gavg, bavg, cavg, lavg = run5times()
 
 print(ravg)
 print(gavg)
@@ -70,7 +71,7 @@ print(lavg)
 #while True:
     #print('a')
     #tcs.get_raw_data()
-    ravg, gavg, bavg, cavg, lavg = run5times()
+    #ravg, gavg, bavg, cavg, lavg = run5times()
     #print(ravg)
     #print(gavg)
     #print(bavg)
