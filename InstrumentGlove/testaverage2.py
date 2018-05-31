@@ -1,3 +1,9 @@
+import time
+import os
+import smbus
+import Adafruit_TCS34725
+
+tcs = Adafruit_TCS34725.TCS34725()
 a = tcs.get_raw_data()
 
 def run5times():
