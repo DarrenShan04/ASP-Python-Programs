@@ -18,9 +18,9 @@ colorValues = {'green' : [[r for r in range(12, 52)], [g for g in range(44, 84)]
                 'pink' : [[r for r in range(60, 100)], [g for g in range(53, 93)], [b for b in range(49, 89)], [c for c in range(202, 242)], [l for l in range(19, 59)]],
                 'darkblue' : [[r for r in range(-3, 37)], [g for g in range(10, 50)], [b for b in range(16, 56)], [c for c in range(64, 104)], [l for l in range(-6, 34)]],
                 'red' : [[r for r in range(38, 48)], [g for g in range(10, 51)], [b for b in range(8, 48)], [c for c in range(93, 133)], [l for l in range(1, 41)]]
-                'BGcolorpiano' : [[r for r in range(11, 51)], [g for g in range(67, 107)], [b for b in range(83, 123)], [c for c in range(202, 242)], [l for l in range(32, 72)], 'piano'],
-                'BGcolorguitar' : [[r for r in range(29, 70)], [g for g in range(72, 112)], [b for b in range(45, 86)], [c for c in range(149, 189)], [l for l in range(71, 111)], 'guitar'],
-                'BGcolorguitar' : [[r for r in range(78, 118)], [g for g in range(117, 157)], [b for b in range(113, 153)], [c for c in range(313, 353)], [l for l in range(76, 116)], 'drum'],}
+                'BGcolorpiano' : [[r for r in range(11, 51)], [g for g in range(67, 107)], [b for b in range(83, 123)], [c for c in range(202, 242)], [l for l in range(32, 72)], ['piano']],
+                'BGcolorguitar' : [[r for r in range(29, 70)], [g for g in range(72, 112)], [b for b in range(45, 86)], [c for c in range(149, 189)], [l for l in range(71, 111)], ['guitar']],
+                'BGcolorguitar' : [[r for r in range(78, 118)], [g for g in range(117, 157)], [b for b in range(113, 153)], [c for c in range(313, 353)], [l for l in range(76, 116)], ['drum']]}
                 
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
