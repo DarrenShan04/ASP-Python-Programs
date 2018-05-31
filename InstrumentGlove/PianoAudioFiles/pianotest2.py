@@ -57,9 +57,11 @@ pianoTunes = {'green' : 'aplay PianoC.wav', 'brown' : 'aplay PianoC#.wav', 'blue
 
 
 while True:
+    print('a')
     tcs.get_raw_data()
     ravg, gavg, bavg, cavg, lavg = run5times()
     for key in colorValues:
+        print('b')
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                 os.system(pianoTunes[key])
                 

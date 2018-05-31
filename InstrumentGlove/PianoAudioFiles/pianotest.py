@@ -68,21 +68,24 @@ run5times()
 
 if ravg in range (25, 51) and gavg in range(85 ,110) and bavg in range(95, 120) and cavg in range(240, 265) and lavg in range(45, 70):
     instrument = 'Piano'
-    sensedcolor = tcs.get_raw_data
+    tcs.get_raw_data()
+    sensedcolor = tcs.get_raw_data()
     for key in colorValues:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                 os.system(pianoTunes[key])
 
 if ravg in range (75, 100) and gavg in range(105, 130) and bavg in range(105, 130) and cavg in range(318, 343) and lavg in range(58, 84):
     instrument = 'Drum'
-    sensedcolor = tcs.get_raw_data
+    tcs.get_raw_data()
+    sensedcolor = tcs.get_raw_data()
     for key in colorValues:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                 os.system(drumTunes[key])
 
 if ravg in range (20, 45) and gavg in range(60, 108) and bavg in range(35, 60) and cavg in range(138, 163) and lavg in range(58, 84):
     instrument = 'Guitar'
-    sensedcolor = tcs.get_raw_data
+    tcs.get_raw_data()
+    sensedcolor = tcs.get_raw_data()
     for key in colorValues:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]) and (lavg in colorValues[key][4]):
                 os.system(drumTunes[key])
