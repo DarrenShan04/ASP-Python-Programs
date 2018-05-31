@@ -5,7 +5,7 @@ import Adafruit_TCS34725
 
 tcs = Adafruit_TCS34725.TCS34725()
 
-colorValues = {'green' : [[r for r in range(25, 51)], [g for g in range(50, 70)], [b for b in range(20, 50)], [c for c in range(100, 200)], [l for l in range(58, 90)]],
+colorValues = {'green' : [[r for r in range(25, 51)], [g for g in range(50, 100)], [b for b in range(20, 50)], [c for c in range(100, 200)], [l for l in range(58, 90)]],
                 'brown' : [[r for r in range(10, 36)], [g for g in range(10, 36)], [b for b in range(10, 36)], [c for c in range(55, 81)], [l for l in range(0, 26)]],
                 'black' : [[r for r in range(20, 46)], [g for g in range(64, 90)], [b for b in range(85, 111)], [c for c in range(190, 216)], [l for l in range(25, 51)]],
                 'blue' : [[r for r in range(7, 33)], [g for g in range(5, 31)], [b for b in range(14, 40)], [c for c in range(5, 31)], [l for l in range(0, 26)]],
