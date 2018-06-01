@@ -71,7 +71,7 @@ while True:
                 instrument = colorValues[key][5]
                 print('a')
                 print(averagevalues)
-            if instrument == 'piano':
+            elif instrument == 'piano':
                 averagevalues=run5times()   
                 ravg, gavg, bavg, cavg, lavg = averagevalues
                 for key in colorValues:
