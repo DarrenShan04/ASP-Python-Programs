@@ -61,6 +61,6 @@ while True:
     ravg, gavg, bavg, cavg, lavg = averagevalues
     for key in colorValues:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
-            os.system(guitarTunes[key])
+            os.system(drumTunes[key])
             time.sleep(0.05)
             continue
