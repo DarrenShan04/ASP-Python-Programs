@@ -54,7 +54,7 @@ def run5times():
 
     return avgr, avgg, avgb, avgc, avgl
 
-guitarTunes = {'green' : 'aplay GuitarC.wav', 'blue' : 'aplay GuitarD.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'magenta':'aplay GuitarG.wav', 'pink':'aplay GuitarA.wav', 'red' : 'GuitarB.wav'}
+guitarTunes = {'green' : 'aplay GuitarC.wav', 'blue' : 'aplay GuitarD.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'magenta':'aplay GuitarG.wav', 'pink':'aplay GuitarA.wav', 'red' : 'aplay GuitarB.wav'}
 
 while True:
     averagevalues=run5times()  
