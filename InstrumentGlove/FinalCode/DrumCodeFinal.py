@@ -54,7 +54,7 @@ def run5times():
 
     return avgr, avgg, avgb, avgc, avgl
 
-drumTunes = {'magenta':'DrumBass.wav', 'blue':'DrumTomLow.wav', 'pink': 'DrumTomHi.wav', 'red':'DrumSnare.wav', 'orange':'DrumHiHat.wav', 'green':'DrumFloorTom.wav', 'yellow':'DrumCrashCymbal.wav'}
+drumTunes = {'magenta' : 'DrumBass.wav', 'blue' : 'DrumTomLow.wav', 'pink' : 'DrumTomHi.wav', 'red' : 'DrumSnare.wav', 'orange' : 'DrumHiHat.wav', 'green' : 'DrumFloorTom.wav', 'yellow' : 'DrumCrashCymbal.wav'}
 
 while True:
     averagevalues=run5times()  
