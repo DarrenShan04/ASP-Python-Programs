@@ -54,7 +54,7 @@ def run5times():
 
     return avgr, avgg, avgb, avgc, avgl
 
-guitarTunes = {'green' : 'aplay GuitarC.wav', 'blue' : 'aplay GuitarD.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'magenta':'aplay GuitarG.wav', 'pink':'aplay GuitarA.wav','red' : 'GuitarB.wav'}
+guitarTunes = {'green' : 'aplay GuitarC.wav', 'blue' : 'aplay GuitarD.wav', 'orange' : 'aplay GuitarE.wav', 'yellow' : 'aplay GuitarF.wav', 'magenta':'aplay GuitarG.wav', 'pink':'aplay GuitarA.wav', 'red' : 'GuitarB.wav'}
 
 while True:
     averagevalues=run5times()  
@@ -62,5 +62,4 @@ while True:
     for key in colorValues:
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
             os.system(guitarTunes[key])
-            time.sleep(0.05)
             continue
