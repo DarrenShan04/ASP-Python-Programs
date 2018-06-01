@@ -15,7 +15,7 @@ colorValues = {'green' : [[r for r in range(20, 42)], [g for g in range(40, 70)]
                 'red' : [[r for r in range(48, 68)], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(90, 120)], [l for l in range(11, 31)]],
                 'BGcolorpiano' : [[r for r in range(21, 41)], [g for g in range(60, 87)], [b for b in range(75, 100)], [c for c in range(180, 220)], [l for l in range(22, 62)], ['piano']],
                 'BGcolorguitar' :  [[r for r in range(12, 33)], [g for g in range(25, 50)], [b for b in range(15, 35)], [c for c in range(70, 90)], [l for l in range(28, 48)], ['guitar']],
-                'BGcolordrum' : [[r for r in range(58, 88)], [g for g in range(68, 98)], [b for b in range(66, 96)], [c for c in range(240, 270)], [l for l in range(86, 106)], ['drum']]}
+                'BGcolordrum' : [[r for r in range(58, 88)], [g for g in range(90, 110)], [b for b in range(90, 110)], [c for c in range(270, 310)], [l for l in range(86, 106)], ['drum']]}
                
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
@@ -80,7 +80,7 @@ while True:
                             time.sleep(0.5)
                             continue
                 
-            if instrument == 'guitar':
+            elif instrument == 'guitar':
                 averagevalues=run5times()
                 ravg, gavg, bavg, cavg, lavg = averagevalues
                 for key in colorValues:
@@ -88,7 +88,7 @@ while True:
                         os.system(guitarTunes[key])
                         time.sleep(0.5)
                         continue
-            if instrument == 'drum':
+            elif instrument == 'drum':
                 averagevalues=run5times()   
                 ravg, gavg, bavg, cavg, lavg = averagevalues
                 for key in colorValues:
