@@ -70,6 +70,7 @@ while True:
             if key.startswith('B'):
                 instrument = colorValues[key][5]
                 print('a')
+                print(averagevalues)
             if instrument == 'piano':
                 averagevalues=run5times()   
                 ravg, gavg, bavg, cavg, lavg = averagevalues
