@@ -53,17 +53,17 @@ def run5times():
     avgl = math.floor(avgl)
 
     return avgr, avgg, avgb, avgc, avgl
-print('a')
+
 drumTunes = {'magenta' : 'DrumBass.wav', 'blue' : 'DrumTomLow.wav', 'pink' : 'DrumTomHi.wav', 'red' : 'DrumSnare.wav', 'orange' : 'DrumHiHat.wav', 'green' : 'DrumFloorTom.wav', 'yellow' : 'DrumCrashCymbal.wav'}
-print('b')
+
 while True:
-    print('c')
+    
     averagevalues=run5times()  
     ravg, gavg, bavg, cavg, lavg = averagevalues
     for key in colorValues:
-        print('d')
+        
         if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
-            print('e')
+            print(key)
             print(drumTunes[key])
             os.system(drumTunes[key])
             time.sleep(0.05)
