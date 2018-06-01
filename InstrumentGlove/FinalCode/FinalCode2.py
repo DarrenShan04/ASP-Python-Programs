@@ -72,9 +72,8 @@ while True:
                 instrument = colorValues[key][5]
                 print('a')
                 print(averagevalues)
-            elif instrument == 'piano':
-                averagevalues=run5times()   
-                ravg, gavg, bavg, cavg, lavg = averagevalues
+        print(instrument)
+            if instrument == 'piano':
                 for key in colorValues:
                     if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
                             os.system(pianoTunes[key])
@@ -82,16 +81,12 @@ while True:
                             continue
                 
             elif instrument == 'guitar':
-                averagevalues=run5times()
-                ravg, gavg, bavg, cavg, lavg = averagevalues
                 for key in colorValues:
                     if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
                         os.system(guitarTunes[key])
                         time.sleep(0.5)
                         continue
             elif instrument == 'drum':
-                averagevalues=run5times()   
-                ravg, gavg, bavg, cavg, lavg = averagevalues
                 for key in colorValues:
                     if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
                         os.system(drumTunes[key])
