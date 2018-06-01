@@ -6,20 +6,16 @@ import math
 
 tcs = Adafruit_TCS34725.TCS34725()
 
-colorValues = {'green' : [[r for r in range(22, 42)], [g for g in range(54, 74)], [b for b in range(24, 44)], [c for c in range(121, 141)], [l for l in range(54, 74)]],
-                'blue' : [[r for r in range(17, 37)], [g for g in range(54, 74)], [b for b in range(70, 90)], [c for c in range(162, 182)], [l for l in range(22, 42)]],
-                
-                'orange' : [[r for r in range(66, 86)], [g for g in range(41, 65)], [b for b in range(23, 43)], [c for c in range(148, 168)], [l for l in range(21, 41)]],
-                'yellow' : [[r for r in range(98, 126)], [g for g in range(106, 131)], [b for b in range(41, 61)], [c for c in range(261, 301)], [l for l in range(98, 118)]],
-                'darkgreen' : [[r for r in range(12, 33)], [g for g in range(30, 53)], [b for b in range(15, 35)], [c for c in range(78, 98)], [l for l in range(28, 48)]],
-                'magenta' : [[r for r in range(35, 56)], [g for g in range(22, 42)], [b for b in range(38, 58)], [c for c in range(113, 133)], [l for l in range(-10, 10)]],
-                
-                'pink' : [[r for r in range(70, 90)], [g for g in range(63, 83)], [b for b in range(59, 79)], [c for c in range(212, 250)], [l for l in range(9, 29)]],
-                
-                'red' : [[r for r in range(48, 68)], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(103, 130)], [l for l in range(11, 31)]],
-                'BGcolorpiano' : [[r for r in range(21, 41)], [g for g in range(77, 97)], [b for b in range(93, 113)], [c for c in range(212, 232)], [l for l in range(22, 62)], ['piano']],
-                'BGcolorguitar' :  [[r for r in range(12, 33)], [g for g in range(30, 53)], [b for b in range(15, 35)], [c for c in range(78, 98)], [l for l in range(28, 48)], ['guitar']],
-                'BGcolordrum' : [[r for r in range(88, 108)], [g for g in range(127, 147)], [b for b in range(123, 143)], [c for c in range(343, 375)], [l for l in range(86, 106)], ['drum']]}
+colorValues = {'green' : [[r for r in range(20, 42)], [g for g in range(40, 70)], [b for b in range(20, 44)], [c for c in range(100, 140)], [l for l in range(54, 74)]],               
+                'blue' : [[r for r in range(17, 37)], [g for g in range(40, 70)], [b for b in range(60, 90)], [c for c in range(100, 150)], [l for l in range(22, 42)]],                
+                'orange' : [[r for r in range(60, 86)], [g for g in range(35, 65)], [b for b in range(20, 43)], [c for c in range(120, 160)], [l for l in range(21, 41)]],
+                'yellow' : [[r for r in range(88, 126)], [g for g in range(70, 100)], [b for b in range(30, 61)], [c for c in range(210, 245)], [l for l in range(98, 118)]],                
+                'magenta' : [[r for r in range(30, 56)], [g for g in range(15, 32)], [b for b in range(30, 58)], [c for c in range(90, 130)], [l for l in range(-10, 10)]],                
+                'pink' : [[r for r in range(70, 90)], [g for g in range(50, 80)], [b for b in range(50, 80)], [c for c in range(190, 230)], [l for l in range(9, 29)]],                
+                'red' : [[r for r in range(48, 68)], [g for g in range(20, 41)], [b for b in range(18, 38)], [c for c in range(90, 120)], [l for l in range(11, 31)]],
+                'BGcolorpiano' : [[r for r in range(21, 41)], [g for g in range(60, 87)], [b for b in range(75, 100)], [c for c in range(180, 220)], [l for l in range(22, 62)], ['piano']],
+                'BGcolorguitar' :  [[r for r in range(12, 33)], [g for g in range(25, 50)], [b for b in range(15, 35)], [c for c in range(70, 90)], [l for l in range(28, 48)], ['guitar']],
+                'BGcolordrum' : [[r for r in range(58, 88)], [g for g in range(68, 98)], [b for b in range(66, 96)], [c for c in range(240, 270)], [l for l in range(86, 106)], ['drum']]}
                
 sensedcolor = tcs.get_raw_data()
 re, gr, bl, cl = tcs.get_raw_data()
@@ -74,30 +70,28 @@ while True:
             if key.startswith('B'):
                 instrument = colorValues[key][5]
                 print('a')
-            else:
-                pass
-    if instrument == 'piano':
-        averagevalues=run5times()   
-        ravg, gavg, bavg, cavg, lavg = averagevalues
-        for key in colorValues:
-            if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
-                    os.system(pianoTunes[key])
-                    time.sleep(0.5)
-                    continue
-    
-    if instrument == 'guitar':
-        averagevalues=run5times()    
-        ravg, gavg, bavg, cavg, lavg = averagevalues
-        for key in colorValues:
-            if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
-                    os.system(guitarTunes[key])
-                    time.sleep(0.5)
-                    continue
-    if instrument == 'drum':
-        averagevalues=run5times()   
-        ravg, gavg, bavg, cavg, lavg = averagevalues
-        for key in colorValues:
-            if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
-                    os.system(drumTunes[key])
-                    time.sleep(0.5)
-                    continue
+                if instrument == 'piano':
+                    averagevalues=run5times()   
+                    ravg, gavg, bavg, cavg, lavg = averagevalues
+                    for key in colorValues:
+                        if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
+                                os.system(pianoTunes[key])
+                                time.sleep(0.5)
+                                continue
+                
+                if instrument == 'guitar':
+                    averagevalues=run5times()    
+                    ravg, gavg, bavg, cavg, lavg = averagevalues
+                    for key in colorValues:
+                        if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
+                                os.system(guitarTunes[key])
+                                time.sleep(0.5)
+                                continue
+                if instrument == 'drum':
+                    averagevalues=run5times()   
+                    ravg, gavg, bavg, cavg, lavg = averagevalues
+                    for key in colorValues:
+                        if (ravg in colorValues[key][0]) and (gavg in colorValues[key][1]) and (bavg in colorValues[key][2]) and (cavg in colorValues[key][3]):
+                                os.system(drumTunes[key])
+                                time.sleep(0.5)
+                                continue
